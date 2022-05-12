@@ -47,19 +47,17 @@ const Square = ({
   };
 
   return (
-    <>
-      <button
-        onClick={() => handleClick(info.id)}
-        disabled={
-          info.x ||
-          info.o ||
-          winner === 'O is the winner' ||
-          winner === 'X is the winner'
-        }
-      >
-        {!info.x && !info.o ? `_` : `${info.x ? `x` : `o`}`}
-      </button>
-    </>
+    <button
+      onClick={() => handleClick(info.id)}
+      disabled={
+        info.x ||
+        info.o ||
+        winner === 'O is the winner' ||
+        winner === 'X is the winner'
+      }
+    >
+      {!info.x && !info.o ? `_` : `${info.x ? `x` : `o`}`}
+    </button>
   );
 };
 export default Square;
